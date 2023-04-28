@@ -16,7 +16,7 @@ class Amount implements Arrayable
     public function toArray()
     {
         return [
-            'value' => number_format($this->value, 2),
+            'value' => number_format($this->value, 2, '.', ''),
             'currency' => $this->currency,
         ];
     }
