@@ -1,0 +1,38 @@
+{
+    "name": "quetzal-studio/snap-bi-laravel",
+    "description": "SNAP BI package for Laravel",
+    "authors": [
+        {
+            "name": "Ata",
+            "email": "quetzalskeith@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "illuminate/http": "^9.0|^10.0",
+        "illuminate/log": "^9.0|^10.0",
+        "illuminate/support": "^9.0|^10.0"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^7.0",
+        "orchestra/testbench": "^7.0|^8.0",
+        "phpunit/phpunit": "^9.3",
+        "phpseclib/phpseclib": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "QuetzalStudio\\SnapBi\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "QuetzalStudio\\SnapBi\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    }
+}
