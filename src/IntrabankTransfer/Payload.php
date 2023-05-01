@@ -43,6 +43,12 @@ class Payload implements ServicePayload
                 : $this->additionalInfo;
         }
 
+        foreach ($data as $key => $val) {
+            if (is_null($val)) {
+                unset($data[$key]);
+            }
+        }
+
         return $data;
     }
 }
