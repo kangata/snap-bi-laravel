@@ -82,7 +82,6 @@ class Transfer
             'timestamp' => $this->timestamp,
             'signature' => $this->signature(),
             'partner_id' => $this->config->provider()->partnerId(),
-            'client_key' => $this->config->provider()->clientKey(),
             'origin' => $this->origin,
             'external_id' => (string) $this->externalId,
             'channel_id' => (string) $this->channelId,
