@@ -21,7 +21,7 @@ class AccessTokenSignaturePayload
 
         $stringToSign = "{$this->clientKey}|{$timestamp}";
 
-        if (Config::instance()->isDebug()) {
+        if (Config::instance()?->isDebug()) {
             Log::debug(__CLASS__, ['string_to_sign' => $stringToSign]);
         }
 
