@@ -14,6 +14,8 @@ class Config
 
     protected static bool $debug = false;
 
+    protected static ?int $tokenTtl = null;
+
     public function __construct(
         ?string $name = null
     ) {
@@ -54,5 +56,15 @@ class Config
     public static function debug(bool $isDebug): void
     {
         static::$debug = $isDebug;
+    }
+
+    public static function setTokenTtl(int $ttl): void
+    {
+        static::$tokenTtl = $ttl;
+    }
+
+    public static function getTokenTtl(): ?int
+    {
+        return static::$tokenTtl;
     }
 }

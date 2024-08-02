@@ -31,7 +31,9 @@ class AccessToken
      */
     protected function cache(array $payload): void
     {
-        Cache::put($this->cacheKey(), $payload, data_get($payload, 'expiresIn', 600));
+        $ttl = data_get($payload, 'expiresIn', 600);
+
+        Cache::put($this->cacheKey(), $payload, Config::instance()->getTokenTtl() ?? $ttl);
     }
 
     /**
